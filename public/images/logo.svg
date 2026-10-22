@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente Dourado Metálico do Arco e do 'A' -->
+    <linearGradient id="planeGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="25%" stop-color="#f59e0b" />
+      <stop offset="70%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Gradiente Azul Oceânico Escuro das Asas e Avião -->
+    <linearGradient id="planeDeepBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="40%" stop-color="#0369a1" />
+      <stop offset="80%" stop-color="#0c2340" />
+      <stop offset="100%" stop-color="#07172b" />
+    </linearGradient>
+
+    <!-- Gradiente Ciano / Turquesa da Fita Superior do 'A' -->
+    <linearGradient id="planeCyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+
+    <!-- Sombra suave -->
+    <filter id="logoGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0c2340" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <g id="aura-emblem" filter="url(#logoGlow)">
+    <!-- 1. Arco Dourado Circular Superior Direito -->
+    <path
+      d="M 570 120
+         C 680 150, 750 250, 720 370
+         C 695 470, 600 520, 480 520
+         C 400 520, 340 485, 330 465
+         C 345 475, 410 500, 480 500
+         C 580 500, 665 450, 690 360
+         C 715 260, 650 165, 550 135 Z"
+      fill="url(#planeGoldGrad)"
+    />
+
+    <!-- 2. Fitas Azuis e Ciano Ondulantes da Esquerda (Formando a perna esquerda do 'A') -->
+    <!-- Fita Azul Profunda Externa -->
+    <path
+      d="M 430 85
+         C 320 110, 240 220, 235 340
+         C 230 420, 280 495, 390 525
+         C 460 545, 540 535, 600 500
+         C 530 525, 450 525, 390 505
+         C 300 475, 260 410, 260 335
+         C 260 235, 335 130, 430 85 Z"
+      fill="url(#planeDeepBlueGrad)"
+    />
+
+    <!-- Fita Ciano / Turquesa Dinâmica que aponta para o avião -->
+    <path
+      d="M 235 340
+         C 235 400, 275 460, 350 490
+         C 330 460, 315 410, 335 340
+         C 360 250, 430 180, 490 145
+         C 430 195, 375 260, 355 340
+         C 340 400, 360 440, 380 460
+         C 310 430, 275 380, 275 330
+         C 275 270, 320 200, 395 135
+         C 300 185, 235 255, 235 340 Z"
+      fill="url(#planeCyanGrad)"
+    />
+
+    <!-- Fita de crista inferior azul marinho -->
+    <path
+      d="M 260 410
+         C 300 480, 380 530, 480 540
+         C 420 525, 350 485, 310 425 Z"
+      fill="url(#planeDeepBlueGrad)"
+    />
+
+    <!-- 3. Haste Dourada 3D Bevel (Perna Direita da letra 'A') -->
+    <path
+      d="M 450 205
+         L 485 365
+         L 440 370
+         L 415 260 Z"
+      fill="url(#planeGoldGrad)"
+    />
+
+    <!-- 4. Avião a Jato Soberano em Ascensão (Ângulo de 45° rumo ao topo direito) -->
+    <g transform="translate(560, 160) rotate(-35)">
+      <!-- Fuselagem Principal do Avião -->
+      <path
+        d="M 0 -70
+           C 6 -70, 14 -50, 14 -10
+           L 14 30
+           L 85 45
+           L 85 62
+           L 14 55
+           L 14 95
+           L 38 112
+           L 38 124
+           L 0 116
+           L -38 124
+           L -38 112
+           L -14 95
+           L -14 55
+           L -85 62
+           L -85 45
+           L -14 30
+           L -14 -10
+           C -14 -50, -6 -70, 0 -70 Z"
+        fill="url(#planeDeepBlueGrad)"
+      />
+      <!-- Brilho no Bico do Avião -->
+      <path
+        d="M 0 -68
+           C 3 -68, 6 -55, 6 -30
+           L -6 -30
+           C -6 -55, -3 -68, 0 -68 Z"
+        fill="#38bdf8"
+        opacity="0.8"
+      />
+    </g>
+  </g>
+
+  <!-- 5. Tipografia AURA (com o 'A' integrado ao emblema) -->
+  <g transform="translate(460, 365)">
+    <!-- Letras 'URA' em tipografia serifada de alto luxo -->
+    <text
+      x="0"
+      y="0"
+      font-family="'Playfair Display', 'Cinzel', 'Outfit', serif"
+      font-size="125"
+      font-weight="800"
+      letter-spacing="0.08em"
+      fill="#0c2340"
+    >
+      URA
+    </text>
+
+    <!-- Subtítulo 'TRAVEL' com tracking expandido -->
+    <text
+      x="125"
+      y="80"
+      font-family="'Plus Jakarta Sans', 'Outfit', sans-serif"
+      font-size="52"
+      font-weight="700"
+      letter-spacing="0.34em"
+      text-anchor="middle"
+      fill="#0c2340"
+    >
+      TRAVEL
+    </text>
+  </g>
+</svg>

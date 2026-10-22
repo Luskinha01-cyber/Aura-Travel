@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Gradiente do fundo do círculo para contraste perfeito em qualquer aba (clara ou escura) -->
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e2a47" />
+      <stop offset="100%" stop-color="#071526" />
+    </linearGradient>
+
+    <!-- Gradiente Dourado Vibrante -->
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#fbbf24" />
+      <stop offset="80%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Gradiente Ciano / Azul Aéreo -->
+    <linearGradient id="favCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+
+    <!-- Brilho suave da aeronave -->
+    <filter id="planeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Fundo Circular de Alto Contraste (Garante visibilidade 100% em abas escuras e claras) -->
+  <circle cx="32" cy="32" r="30" fill="url(#favBg)" stroke="url(#favGold)" stroke-width="1.8" />
+
+  <!-- Órbita Dourada Tridimensional Elíptica -->
+  <ellipse cx="32" cy="32" rx="23" ry="11" transform="rotate(-28 32 32)" fill="none" stroke="url(#favGold)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Fita Curva Aerodinâmica Ciano/Azul (Asa Esquerda do Monograma 'A') -->
+  <path d="M 16 43 C 14 30, 24 19, 34 16 C 26 21, 21 28, 22 38 C 22 42, 24 45, 27 47 C 22 47, 18 45, 16 43 Z" fill="url(#favCyan)" />
+
+  <!-- Avião Comercial a Jato em Ascensão (Branco Puro + Asa Ciano - Super Nítido em 16x16) -->
+  <g filter="url(#planeGlow)">
+    <!-- Fuselagem do Avião -->
+    <path d="M 44 14 L 38 27 L 27 34 L 28 36 L 36 32 L 34 40 L 30 43 L 31 44.5 L 35 43.5 L 39 45 L 39.5 44 L 38 39 L 44 26 L 49 19 C 50.5 17 50.5 14.5 49 13.5 C 47.5 12.5 45.5 12.8 44 14 Z" fill="#ffffff" />
+    
+    <!-- Asa Principal Superior Estilizada (Ciano e Azul de Contraste) -->
+    <path d="M 37 25 L 22 28 L 24 30.5 L 34 29 Z" fill="url(#favCyan)" />
+
+    <!-- Turbina / Detalhe Aerodinâmico Dourado -->
+    <circle cx="35" cy="30" r="1.3" fill="url(#favGold)" />
+  </g>
+</svg>

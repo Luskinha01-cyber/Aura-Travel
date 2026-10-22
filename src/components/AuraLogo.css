@@ -1,0 +1,34 @@
+/* Aura Logo Styling - Nova Identidade com Avião e Órbita Dourada */
+.aura-brand-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.aura-brand-logo-wrapper:hover {
+  transform: translateY(-1px);
+}
+
+.aura-logo-img {
+  display: block;
+  object-fit: contain;
+  height: 44px;
+  width: auto;
+  transition: filter var(--transition-fast);
+}
+
+/* No Dark Mode, adiciona uma base translúcida elegante para garantir leitura perfeita da tipografia escura */
+[data-theme='dark'] .site-header .aura-brand-logo-wrapper,
+[data-theme='dark'] .site-footer .aura-brand-logo-wrapper {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+}
+
+/* Variante especial para vouchers e documentos */
+.official-travel-voucher .aura-logo-img {
+  height: 38px;
+}
