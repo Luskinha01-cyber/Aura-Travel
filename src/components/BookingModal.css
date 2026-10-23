@@ -448,13 +448,18 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   padding: 10px 20px;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: 0.88rem;
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.copy-pix-btn:hover {
+  background: #0369a1;
 }
 
 /* Virtual Card Preview */
@@ -567,7 +572,7 @@
 }
 
 .modal-primary-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   font-weight: 700;
   font-size: 0.95rem;
@@ -577,9 +582,11 @@
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+  transition: all var(--transition-fast);
 }
 
 .modal-primary-btn:hover {
+  background: #0369a1;
   transform: translateY(-2px);
 }
 
@@ -803,8 +810,13 @@
 }
 
 .done-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
+  transition: background var(--transition-fast);
+}
+
+.done-btn:hover {
+  background: #0369a1;
 }
 
 @media (max-width: 650px) {

@@ -285,7 +285,7 @@
 }
 
 .book-cta-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   font-weight: 700;
   font-size: 0.9rem;
@@ -296,6 +296,7 @@
 }
 
 .book-cta-btn:hover {
+  background: #0369a1;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
 }

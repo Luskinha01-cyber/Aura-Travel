@@ -90,12 +90,17 @@
 }
 
 .empty-cta-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   padding: 12px 24px;
   border-radius: var(--radius-full);
   font-weight: 700;
   margin-top: 12px;
+  transition: all var(--transition-fast);
+}
+
+.empty-cta-btn:hover {
+  background: #0369a1;
 }
 
 /* Booking Card */

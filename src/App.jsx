@@ -13,19 +13,12 @@ import Footer from './components/Footer';
 import { CURATED_DESTINATIONS, generateProceduralHotelsForLocation } from './data/destinations';
 import { getStoredReservations } from './services/bookingStorage';
 import {
-  Compass,
-  Sparkles,
   MapPin,
-  Calendar,
-  Layers,
-  ArrowRight,
-  Shield,
-  Plane,
-  Heart,
   Globe,
   Palmtree,
-  Wine,
   MountainSnow,
+  Heart,
+  Wine,
   Building2
 } from 'lucide-react';
 
@@ -177,11 +170,6 @@ export default function App() {
       <section className="hero-banner-section">
         <div className="hero-backdrop-glow" />
         <div className="hero-container">
-          <div className="hero-badge animate-fade-in">
-            <Sparkles size={14} className="sparkle-icon" />
-            <span>Viagens Exclusivas & Previsão Meteorológica em Tempo Real</span>
-          </div>
-
           <h1 className="hero-headline animate-fade-in">
             O Mundo Espera Por Você.<br />
             <span className="gradient-text">Viva Momentos Inesquecíveis.</span>

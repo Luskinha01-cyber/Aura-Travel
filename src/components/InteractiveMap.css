@@ -47,42 +47,6 @@
   pointer-events: auto;
 }
 
-.map-layer-selector {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  padding: 3px;
-  box-shadow: var(--shadow-md);
-  pointer-events: auto;
-}
-
-.layer-switch-btn {
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  background: transparent;
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.layer-switch-btn:hover {
-  color: var(--text-primary);
-  background: var(--bg-surface);
-}
-
-.layer-switch-btn.active {
-  background: var(--accent);
-  color: #ffffff;
-  box-shadow: var(--shadow-sm);
-}
-
 .compass-icon {
   color: var(--accent);
 }
@@ -212,7 +176,7 @@
 }
 
 .popup-book-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   border: none;
   font-weight: 700;
@@ -221,9 +185,11 @@
   border-radius: var(--radius-full);
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+  transition: all var(--transition-fast);
 }
 
 .popup-book-btn:hover {
+  background: #0369a1;
   transform: translateY(-1px);
 }
 

@@ -198,12 +198,17 @@
 }
 
 .popover-done-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   font-weight: 600;
   font-size: 0.88rem;
   padding: 8px 18px;
   border-radius: var(--radius-full);
+  transition: background var(--transition-fast);
+}
+
+.popover-done-btn:hover {
+  background: #0369a1;
 }
 
 /* Autocomplete Dropdown */
@@ -305,7 +310,7 @@
 
 /* Submit Button */
 .search-submit-btn {
-  background: var(--accent-gradient);
+  background: #0284c7;
   color: white;
   display: flex;
   align-items: center;
@@ -320,6 +325,7 @@
 }
 
 .search-submit-btn:hover {
+  background: #0369a1;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5);
 }

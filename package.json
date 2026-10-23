@@ -1,7 +1,14 @@
 {
-  "name": "sistema-reservas-viagens",
+  "name": "aura-travel",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Projeto de Site de reserva de viagens",
+  "homepage": "https://aura-travel-one.vercel.app",
+  "author": "Lucas dos Anjos (Luskinha01-cyber)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luskinha01-cyber/Aura-Travel.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

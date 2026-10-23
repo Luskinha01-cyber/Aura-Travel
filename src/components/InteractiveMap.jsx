@@ -1,29 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MapPin, Navigation, Compass, Layers, Eye } from 'lucide-react';
+import { Compass } from 'lucide-react';
 import './InteractiveMap.css';
 
-// Provedores de Tiles 100% Gratuitos e Sem Necessidade de API Key
-const TILE_PROVIDERS = {
-  esriStreet: {
-    name: 'Ruas & Turismo',
-    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
-    maxZoom: 19,
-    attribution: 'Tiles &copy; Esri'
-  },
-  osm: {
-    name: 'OpenStreetMap',
-    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'
-  },
-  satellite: {
-    name: 'Satélite HD',
-    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    maxZoom: 19,
-    attribution: 'Tiles &copy; Esri & Earthstar Geographics'
-  }
+// Provedor de Tiles Fixo: Ruas & Turismo (Esri World Street Map)
+const STREET_TILE_PROVIDER = {
+  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+  maxZoom: 19,
+  attribution: 'Tiles &copy; Esri'
 };
 
 export default function InteractiveMap({
@@ -40,8 +25,6 @@ export default function InteractiveMap({
   const tileLayerRef = useRef(null);
   const markersRef = useRef([]);
 
-  const [activeTileKey, setActiveTileKey] = useState('esriStreet');
-
   // Inicializa mapa Leaflet
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -54,11 +37,10 @@ export default function InteractiveMap({
         attributionControl: false
       });
 
-      // Layer inicial (Esri Street Map - limpo, moderno e livre de chaves/marcas d'água)
-      const initialProvider = TILE_PROVIDERS[activeTileKey];
-      const tileLayer = L.tileLayer(initialProvider.url, {
-        maxZoom: initialProvider.maxZoom,
-        attribution: initialProvider.attribution
+      // Layer fixo: Ruas & Turismo (Esri World Street Map)
+      const tileLayer = L.tileLayer(STREET_TILE_PROVIDER.url, {
+        maxZoom: STREET_TILE_PROVIDER.maxZoom,
+        attribution: STREET_TILE_PROVIDER.attribution
       }).addTo(map);
 
       tileLayerRef.current = tileLayer;
@@ -78,25 +60,6 @@ export default function InteractiveMap({
       // Cleanup no unmount
     };
   }, []);
-
-  // Alterna o estilo visual do mapa (Ruas, OpenStreetMap, Satélite)
-  const handleChangeTileLayer = (key) => {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-
-    const provider = TILE_PROVIDERS[key];
-    if (tileLayerRef.current) {
-      map.removeLayer(tileLayerRef.current);
-    }
-
-    const newLayer = L.tileLayer(provider.url, {
-      maxZoom: provider.maxZoom,
-      attribution: provider.attribution
-    }).addTo(map);
-
-    tileLayerRef.current = newLayer;
-    setActiveTileKey(key);
-  };
 
   // Garante que o mapa se adapte a redimensionamentos da tela
   useEffect(() => {
@@ -222,26 +185,11 @@ export default function InteractiveMap({
 
   return (
     <div className="interactive-map-wrapper">
-      {/* Overlay com Badge e Seletor de Camadas */}
+      {/* Overlay com Badge do Mapa */}
       <div className="map-top-controls">
         <div className="map-badge-overlay">
           <Compass size={15} className="compass-icon" />
           <span>Mapa Interativo</span>
-        </div>
-
-        {/* Camadas Rápidas: Ruas / Satélite / OSM */}
-        <div className="map-layer-selector">
-          {Object.entries(TILE_PROVIDERS).map(([key, provider]) => (
-            <button
-              key={key}
-              type="button"
-              className={`layer-switch-btn ${activeTileKey === key ? 'active' : ''}`}
-              onClick={() => handleChangeTileLayer(key)}
-              title={`Mudar visual para ${provider.name}`}
-            >
-              {provider.name}
-            </button>
-          ))}
         </div>
       </div>
 

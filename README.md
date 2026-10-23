@@ -1,5 +1,13 @@
 # ✈️ Aura Travel — Sistema de Reservas & Viagens de Alto Padrão
 
+[![Deploy com Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://aura-travel-one.vercel.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Aura--Travel-181717?style=for-the-badge&logo=github)](https://github.com/Luskinha01-cyber/Aura-Travel)
+[![React 19](https://img.shields.io/badge/React-19.3-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)](LICENSE)
+
+> 🌐 **Acesse a aplicação em produção:** [https://aura-travel-one.vercel.app](https://aura-travel-one.vercel.app)
+
 Plataforma moderna e imersiva para descoberta de destinos globais, consulta de condições meteorológicas em tempo real, navegação em mapas interativos georreferenciados e simulação completa de reservas hoteleiras com emissão instantânea de vouchers.
 
 ![Aura Travel Preview](public/images/logo.png)
@@ -89,6 +97,13 @@ sistema-reservas-viagens/
 │   └── index.css                # Sistema de design tokens e estilos globais
 └── index.html                   # HTML base da aplicação
 ```
+
+---
+
+## 👨‍💻 Autor & Créditos
+Desenvolvido por **Lucas dos Anjos** ([@Luskinha01-cyber](https://github.com/Luskinha01-cyber)).
+* **GitHub:** [https://github.com/Luskinha01-cyber/Aura-Travel](https://github.com/Luskinha01-cyber/Aura-Travel)
+* **Demo ao Vivo:** [https://aura-travel-one.vercel.app](https://aura-travel-one.vercel.app)
 
 ---
 
